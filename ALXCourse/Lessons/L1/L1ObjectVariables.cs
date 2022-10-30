@@ -1,10 +1,10 @@
-﻿using ALXCourse.Lessons.Classes;
+﻿using ALXCourse.Lessons.L1.Classes;
 
-namespace ALXCourse.Lessons
+namespace ALXCourse.Lessons.L1
 {
     public class L1ObjectVariables
     {
-        public static void Test() //ta metoda jest statyczna więc mozna wywołac ją bezpośrednio na klasie i dlatego podswietla się na zielono np Console też  statyczna nie zwraca wartości
+        public static void Run() //ta metoda jest statyczna więc mozna wywołac ją bezpośrednio na klasie i dlatego podswietla się na zielono np Console też  statyczna nie zwraca wartości
         {
             Console.WriteLine("Variables");
 
@@ -20,14 +20,14 @@ namespace ALXCourse.Lessons
             Console.WriteLine("Age" + dog.Age); //wyświetlanie właściwości wiek
 
             Dog.Eat(); // do elementu statycznego odwołujemy się za pomoca nazwy klasy
-                //czyli nie można napisać dog.Eat() w odwołaniu do obiektu   w niestatycznych się właśnie tak robi
-                /////////////////////KAZDY PLIK CS jest klasa/////////////////////
-                /// jeżeli klasa jest statyczna to moze zawierac tylko statyczne metody
-                /// a niestatyczna klasa moze zawierac i statyczne i niestatyczne/////////////
-      
+                       //czyli nie można napisać dog.Eat() w odwołaniu do obiektu   w niestatycznych się właśnie tak robi
+                       /////////////////////KAZDY PLIK CS jest klasa/////////////////////
+            /// jeżeli klasa jest statyczna to moze zawierac tylko statyczne metody
+            /// a niestatyczna klasa moze zawierac i statyczne i niestatyczne/////////////
+
         }
 
-        public static void Test2() //ta metoda jest statyczna więc mozna wywołac ją bezpośrednio na klasie i dlatego podswietla się na zielono np Console też  statyczna nie zwraca wartości
+        public static void Run2() //ta metoda jest statyczna więc mozna wywołac ją bezpośrednio na klasie i dlatego podswietla się na zielono np Console też  statyczna nie zwraca wartości
         {
             Dog westieDog = new Dog(); //tutaj obiekty są lokalne czyli tylko na czas uruchomienia danej metody test2
             westieDog.Race = "WHWT";

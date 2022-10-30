@@ -1,5 +1,6 @@
 ﻿using ALXCourse.Assigments;
 using ALXCourse.Lessons;
+using ALXCourse.Lessons.L2;
 
 //Console.WriteLine("Hello, World!");
 
@@ -7,7 +8,7 @@ using ALXCourse.Lessons;
 //Console.WriteLine("test"); //linijka tekstu od razu sie robi enter
 //Console.Write("test \n"); //tu tez enter bo \n
 
-//L1Variables.Test(); //uruchamiamy metode test z KLASY L1Variables, 
+//L1Variables.Run(); //uruchamiamy metode test z KLASY L1Variables, 
 //*czyli Program.cs jest głównym w którym bez odwołania się nic sie nie wydarzy sie
 
 //////////////////////klasa niestatyczna////////////////
@@ -16,11 +17,13 @@ using ALXCourse.Lessons;
 /*ClassName objName = new ClassName()*/
 //l1variable.WriteSomething(); //uruchomienie metody WriteSomething obiektu l1variable
 
-//L1ObjectVariables.Test2(); //teraz uruchamiamy metode test2()
+//L1ObjectVariables.Run2(); //teraz uruchamiamy metode run2()
 
-//L1SimpleVariables.Test();
-//L1Strings.Test();
+//L1SimpleVariables.Run();
+//L1Strings.Run();
 //L1Strings.ConcatenationTest();
 
-//L1Constructors.Test();
-AssigmentsDemo.Run();
+//L1Constructors.Run();
+//AssigmentsDemo.Run();
+//L2Conditionales.Run();
+L2EnumsAndSwitch.Run();

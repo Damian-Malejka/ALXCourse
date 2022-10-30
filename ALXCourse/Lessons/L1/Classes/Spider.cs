@@ -1,6 +1,6 @@
 ﻿using System.Security.Cryptography.X509Certificates;
 
-namespace ALXCourse.Lessons.Classes
+namespace ALXCourse.Lessons.L1.Classes
 {
     public class Spider
     {

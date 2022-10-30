@@ -1,10 +1,10 @@
 ﻿using System.Xml.Linq;
 
-namespace ALXCourse.Lessons
+namespace ALXCourse.Lessons.L1
 {
     public class L1Strings
     {
-        public static void Test()
+        public static void Run()
         {
             string name = "Mateusz";
             Console.WriteLine(name);
@@ -15,17 +15,17 @@ namespace ALXCourse.Lessons
 
             ExpandString(name, "hello");
             Console.WriteLine(name);
-            
+
             ExpandString(name, "world");
             Console.WriteLine(name);
-           
+
             ExpandString(name, "something");
             Console.WriteLine(name);
         }
 
-        public static void ExpandString(string word,string extension)
+        public static void ExpandString(string word, string extension)
         {
-            word =word + extension;
+            word = word + extension;
         }
 
         public static void ConcatenationTest()

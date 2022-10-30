@@ -1,4 +1,4 @@
-﻿using ALXCourse.Lessons.Classes;
+﻿using ALXCourse.Lessons.L1.Classes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,11 +6,11 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ALXCourse.Lessons
+namespace ALXCourse.Lessons.L1
 {
     public class L1Constructors
     {
-        public static void Test()
+        public static void Run()
         {
             //var spider = new Spider(); //mamy zdefiniowaną klase spider wiec mozemy uzyc tak i on nam sam dobierze
 
@@ -25,7 +25,7 @@ namespace ALXCourse.Lessons
             spider.IsVenomous = true;
             spider.Sex = "female";
 
-            var redSpider = new Spider("red","Tarantula",true,"male"); //tutaj korzystamy z tego drugiego konstruktora
+            var redSpider = new Spider("red", "Tarantula", true, "male"); //tutaj korzystamy z tego drugiego konstruktora
 
             var blueSpider = new Spider("blue", "Goliath");
 
