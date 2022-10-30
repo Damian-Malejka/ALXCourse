@@ -1,4 +1,5 @@
-﻿using ALXCourse.Lessons;
+﻿using ALXCourse.Assigments;
+using ALXCourse.Lessons;
 
 //Console.WriteLine("Hello, World!");
 
@@ -21,4 +22,5 @@
 //L1Strings.Test();
 //L1Strings.ConcatenationTest();
 
-L1Constructors.Test();
+//L1Constructors.Test();
+AssigmentsDemo.Run();
