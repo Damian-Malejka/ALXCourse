@@ -32,7 +32,6 @@ namespace ALXCourse.Assigments.M2
             {
                 SeniorEmployees.Add(employee);
             }
-            
         }
         public void ClassifySeniorityByExperience(Employee employee)
         {

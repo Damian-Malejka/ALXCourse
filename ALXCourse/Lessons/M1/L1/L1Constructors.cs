@@ -1,4 +1,4 @@
-﻿using ALXCourse.Lessons.L1.Classes;
+﻿using ALXCourse.Lessons.M1.L1.Classes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +6,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ALXCourse.Lessons.L1
+namespace ALXCourse.Lessons.M1.L1
 {
     public class L1Constructors
     {

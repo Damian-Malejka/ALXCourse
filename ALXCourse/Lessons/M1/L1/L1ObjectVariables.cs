@@ -1,6 +1,6 @@
-﻿using ALXCourse.Lessons.L1.Classes;
+﻿using ALXCourse.Lessons.M1.L1.Classes;
 
-namespace ALXCourse.Lessons.L1
+namespace ALXCourse.Lessons.M1.L1
 {
     public class L1ObjectVariables
     {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ALXCourse.Lessons.L2
+namespace ALXCourse.Lessons.M1.L2
 {
     public class L2Conditionales
     {

@@ -1,6 +1,6 @@
 ﻿using System.Xml.Linq;
 
-namespace ALXCourse.Lessons.L1
+namespace ALXCourse.Lessons.M1.L1
 {
     public class L1Strings
     {

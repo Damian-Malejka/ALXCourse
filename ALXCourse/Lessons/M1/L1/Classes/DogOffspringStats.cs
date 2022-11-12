@@ -1,6 +1,6 @@
 ﻿/*blade usingi mozna wywalac bo to znaczy ze nie sa one tutaj wykorzystywane*/
 
-namespace ALXCourse.Lessons.L1.Classes
+namespace ALXCourse.Lessons.M1.L1.Classes
 {
     public class DogOffspringStats
     {

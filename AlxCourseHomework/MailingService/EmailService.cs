@@ -21,7 +21,6 @@ namespace AlxCourseHomework.MailingService
             {
                 Console.WriteLine("The email has not been sent. The destination OR sender address is null");
             }
-
         }
     }
 }
