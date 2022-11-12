@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ALXCourse.Assigments.Classes
+namespace ALXCourse.Assigments.M1.Classes
 {
     public class Computer
     {

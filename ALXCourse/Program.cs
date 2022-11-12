@@ -1,4 +1,5 @@
 ﻿using ALXCourse.Assigments;
+using ALXCourse.Assigments.M2;
 using ALXCourse.Lessons;
 using ALXCourse.Lessons.L2;
 
@@ -26,4 +27,6 @@ using ALXCourse.Lessons.L2;
 //L1Constructors.Run();
 //AssigmentsDemo.Run();
 //L2Conditionales.Run();
-L2EnumsAndSwitch.Run();
+//L2EnumsAndSwitch.Run();
+
+SeniorityServiceTest.Run();
