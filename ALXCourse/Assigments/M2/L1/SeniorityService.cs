@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ALXCourse.Assigments.M2
+namespace ALXCourse.Assigments.M2.L1
 {
     public class SeniorityService
     {
@@ -20,11 +20,11 @@ namespace ALXCourse.Assigments.M2
         }
         public void ClassifySeniorityBySalary(Employee employee)
         {
-            if(employee.Salary<5000)
+            if (employee.Salary < 5000)
             {
                 JuniorEmployees.Add(employee);
             }
-            else if((employee.Salary >= 5000) && (employee.Salary < 10000))
+            else if (employee.Salary >= 5000 && employee.Salary < 10000)
             {
                 MidEmployees.Add(employee);
             }
@@ -39,7 +39,7 @@ namespace ALXCourse.Assigments.M2
             {
                 JuniorEmployees.Add(employee);//dodawanie pracownika do listy
             }
-            else if ((employee.Experience >= 3) && (employee.Experience < 10))
+            else if (employee.Experience >= 3 && employee.Experience < 10)
             {
                 MidEmployees.Add(employee);
             }
@@ -48,7 +48,7 @@ namespace ALXCourse.Assigments.M2
                 SeniorEmployees.Add(employee);
             }
         }
-        
+
         public void ClearClassifyLists()
         {
             JuniorEmployees.Clear();//czyszczenie zawartości całej listy

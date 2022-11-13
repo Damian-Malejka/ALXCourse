@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 
-namespace ALXCourse.Assigments.M2
+namespace ALXCourse.Assigments.M2.L1
 {
     public class Employee
     {

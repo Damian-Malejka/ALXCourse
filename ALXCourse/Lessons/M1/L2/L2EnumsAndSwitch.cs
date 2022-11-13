@@ -11,10 +11,10 @@ namespace ALXCourse.Lessons.L2
     {
         public static void Run()
         {
-            var whiteQueen = new ChessFigure(ChessFigureType.QUENN, ChessColor.WHITE);
+            var whiteQueen = new ChessFigure(ChessFigureType.QUEEN, ChessColor.WHITE);
 
             var blackQueen = new ChessFigure();
-            blackQueen.FigureType = ChessFigureType.QUENN;
+            blackQueen.FigureType = ChessFigureType.QUEEN;
             blackQueen.FigureColor = ChessColor.BLACK;
 
             var whiteKing = new ChessFigure  //konstruktor domyślny
@@ -35,7 +35,7 @@ namespace ALXCourse.Lessons.L2
         {
             switch(chessFigure.FigureType)
             {
-                case ChessFigureType.QUENN:
+                case ChessFigureType.QUEEN:
                     Console.WriteLine("The figure is a queen");
                     break;
                 case ChessFigureType.KING:

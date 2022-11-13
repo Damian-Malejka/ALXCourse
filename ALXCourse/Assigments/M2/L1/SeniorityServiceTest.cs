@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ALXCourse.Assigments.M2
+namespace ALXCourse.Assigments.M2.L1
 {
     public static class SeniorityServiceTest
     {
@@ -50,7 +50,7 @@ namespace ALXCourse.Assigments.M2
 
         public static void PresentnEmployees(List<Employee> employees)
         {
-            foreach(var employee in employees)
+            foreach (var employee in employees)
             {
                 Console.WriteLine($"\tEmployee: {employee.Name}");
             }

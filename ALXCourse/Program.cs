@@ -1,8 +1,10 @@
 ﻿using ALXCourse.Assigments.M1;
 using ALXCourse.Assigments.M2;
+using ALXCourse.Assigments.M2.L2;
 using ALXCourse.Lessons.M1;
 using ALXCourse.Lessons.M1.L2;
 using ALXCourse.Lessons.M2.L1;
+using ALXCourse.Lessons.M2.L2;
 
 //Console.WriteLine("Hello, World!");
 
@@ -42,4 +44,9 @@ using ALXCourse.Lessons.M2.L1;
 //L1Loops.RunWhile();
 //L1Loops.RunDoWhile();
 //L1Dictionaries.Run();
-L1Dictionaries.Run1();
+//L1Dictionaries.Run1();
+//BookStorageApp.Run();
+//L2GettersAndSetters.Run();
+//L2Encapsulation.Run();
+//L2Interfaces.Run();
+L2Inheritance.Run();

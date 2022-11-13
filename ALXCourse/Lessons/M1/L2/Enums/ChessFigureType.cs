@@ -12,7 +12,7 @@ namespace ALXCourse.Lessons.L2.Enums
         BISHOP, //goniec//1
         KNIGHT, //KONIK//2
         ROOK, //wieża//3
-        QUENN,//królowa//4
+        QUEEN,//królowa//4
         KING//król//5                  ENUM TO TABLICA TAKICH WARIANTOW wszystkie przypadki NIE MA WIECEJ PRZYPADKÓW
     }
 }

@@ -1,8 +1,9 @@
-﻿using System.Security.Cryptography.X509Certificates;
+﻿using ALXCalculator.Interfaces;
+using System.Security.Cryptography.X509Certificates;
 
 namespace ALXCalculator
 {
-    public class Calculator
+    public class Calculator :ICalculator
     {
         List<char> ValidChars;
         char[] ValidOperatorArray = { '+', '-', '*', '/' };
