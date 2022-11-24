@@ -1,4 +1,5 @@
-﻿using ShootingRangeApp.Inheritance;
+﻿using ShootingRangeApp.Enums;
+using ShootingRangeApp.Inheritance;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -80,9 +81,50 @@ namespace ShootingRangeApp
                 Console.Write("Czy chcesz kontynuować zakupy? [T]tak :");
                 continueVar = Console.ReadKey().KeyChar;
             } while(continueVar=='T' || continueVar == 't');
+            ShowRecipt(akm47sgun, glockGun, magnumGun, waltherGun, xm15Gun);
+        }
 
-            var suma = 0;
+        public static void ShowRecipt(Akm47s akm47sgun, Glock glockGun, Magnum magnumGun, Walther waltherGun, Xm15 xm15Gun)
+        {
+            Console.Clear();
+            Console.WriteLine("/////////////PARAGON/////////////");
+            double suma = 0.0;
+            if((akm47sgun.NumberOfSingleShoots != 0) || (akm47sgun.NumberOfMultipleShoots!=0))
+            {
+                Console.WriteLine($"\tOpłata za {GunsTypeNames.AKM47S} ");
+                Console.WriteLine($"\t\tLiczba pojedyńczych strzałów: {akm47sgun.NumberOfSingleShoots} x {akm47sgun.SingleShootPrice}zł = {(akm47sgun.NumberOfSingleShoots * akm47sgun.SingleShootPrice)}");
+                Console.WriteLine($"\t\tLiczba seryjnych strzałów: {akm47sgun.NumberOfMultipleShoots} x {akm47sgun.MultipleShootPrice}zł = {(akm47sgun.NumberOfMultipleShoots * akm47sgun.MultipleShootPrice)}");
+                suma += (akm47sgun.NumberOfSingleShoots * akm47sgun.SingleShootPrice) + (akm47sgun.NumberOfMultipleShoots * akm47sgun.MultipleShootPrice);
+            }
+            if (glockGun.NumberOfSingleShoots != 0)
+            {
+                Console.WriteLine($"\tOpłata za {GunsTypeNames.GLOCK} ");
+                Console.WriteLine($"\t\tLiczba pojedyńczych strzałów: {glockGun.NumberOfSingleShoots} x {glockGun.SingleShootPrice}zł = {(glockGun.NumberOfSingleShoots * glockGun.SingleShootPrice)}");
+                suma += (glockGun.NumberOfSingleShoots * glockGun.SingleShootPrice);
+            }
+            if ((magnumGun.NumberOfSingleShoots != 0) || (magnumGun.NumberOfMultipleShoots != 0))
+            {
+                Console.WriteLine($"\tOpłata za {GunsTypeNames.MAGNUM} ");
+                Console.WriteLine($"\t\tLiczba pojedyńczych strzałów: {magnumGun.NumberOfSingleShoots} x {magnumGun.SingleShootPrice}zł = {(magnumGun.NumberOfSingleShoots * magnumGun.SingleShootPrice)}");
+                Console.WriteLine($"\t\tLiczba seryjnych strzałów: {magnumGun.NumberOfMultipleShoots} x {magnumGun.MultipleShootPrice}zł = {(magnumGun.NumberOfMultipleShoots * magnumGun.MultipleShootPrice)}");
+                suma += (magnumGun.NumberOfSingleShoots * magnumGun.SingleShootPrice) + (magnumGun.NumberOfMultipleShoots * magnumGun.MultipleShootPrice);
+            }
+            if (waltherGun.NumberOfSingleShoots != 0)
+            {
+                Console.WriteLine($"\tOpłata za {GunsTypeNames.WALTHER} ");
+                Console.WriteLine($"\t\tLiczba pojedyńczych strzałów: {waltherGun.NumberOfSingleShoots} x {waltherGun.SingleShootPrice}zł = {(waltherGun.NumberOfSingleShoots * waltherGun.SingleShootPrice)}");
+                suma += (waltherGun.NumberOfSingleShoots * waltherGun.SingleShootPrice);
+            }
+            if ((xm15Gun.NumberOfSingleShoots != 0) || (xm15Gun.NumberOfMultipleShoots != 0))
+            {
+                Console.WriteLine($"\tOpłata za {GunsTypeNames.XM15} ");
+                Console.WriteLine($"\t\tLiczba pojedyńczych strzałów: {xm15Gun.NumberOfSingleShoots} x {xm15Gun.SingleShootPrice}zł = {(xm15Gun.NumberOfSingleShoots * xm15Gun.SingleShootPrice)}");
+                Console.WriteLine($"\t\tLiczba seryjnych strzałów: {xm15Gun.NumberOfMultipleShoots} x {xm15Gun.MultipleShootPrice}zł = {(xm15Gun.NumberOfMultipleShoots * xm15Gun.MultipleShootPrice)}");
+                suma += (xm15Gun.NumberOfSingleShoots * xm15Gun.SingleShootPrice) + (xm15Gun.NumberOfMultipleShoots * xm15Gun.MultipleShootPrice);
+            }
 
+            Console.WriteLine("KOSZT CAŁKOWITY: " + suma + "zł");
+            Console.WriteLine("\n\nDziękujemy i zapraszamy ponownie");
         }
     }
 }
