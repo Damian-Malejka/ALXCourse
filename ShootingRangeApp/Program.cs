@@ -1,0 +1,2 @@
+﻿using ShootingRangeApp;
+ShootingRangeService.Run();
