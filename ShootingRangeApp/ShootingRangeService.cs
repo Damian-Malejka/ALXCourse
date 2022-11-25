@@ -12,12 +12,8 @@ namespace ShootingRangeApp
     {
         public static void Run()
         {
-            /*var magnumka = new Magnum(1.2);
-            Console.WriteLine(magnumka.GunName);
-            Console.WriteLine($"Cena za jeden seryjny strzał: {magnumka.SingleShootPrice}");
-            Console.WriteLine($"Liczba strzalów: {magnumka.NumberOfSingleShoots}");
-            */
             int selectWeapon;
+
             Akm47s akm47sgun = new Akm47s(4, 0, 0);
             Glock glockGun = new Glock(2, 0);
             Magnum magnumGun = new Magnum(3, 0, 0);
@@ -82,7 +78,7 @@ namespace ShootingRangeApp
                 continueVar = Console.ReadKey().KeyChar;
             } while(continueVar=='T' || continueVar == 't');
             ShowRecipt(akm47sgun, glockGun, magnumGun, waltherGun, xm15Gun);
-
+            PrintRecipt(akm47sgun, glockGun, magnumGun, waltherGun, xm15Gun);
         }
 
         public static void ShowRecipt(Akm47s akm47sgun, Glock glockGun, Magnum magnumGun, Walther waltherGun, Xm15 xm15Gun)
@@ -126,6 +122,64 @@ namespace ShootingRangeApp
 
             Console.WriteLine("KOSZT CAŁKOWITY: " + suma + "zł");
             Console.WriteLine("\n\nDziękujemy i zapraszamy ponownie");
+        }
+
+        public static void PrintRecipt(Akm47s akm47sgun, Glock glockGun, Magnum magnumGun, Walther waltherGun, Xm15 xm15Gun)
+        {
+            try
+            {
+                StreamWriter recipt = new StreamWriter("recipt.txt");
+
+                recipt.WriteLine("/////////////PARAGON/////////////");
+                double suma = 0.0;
+                if ((akm47sgun.NumberOfSingleShoots != 0) || (akm47sgun.NumberOfMultipleShoots != 0))
+                {
+                    recipt.WriteLine($"\tOpłata za {GunsTypeNames.AKM47S} ");
+                    recipt.WriteLine($"\t\tLiczba pojedyńczych strzałów: {akm47sgun.NumberOfSingleShoots} x {akm47sgun.SingleShootPrice}zł = {(akm47sgun.NumberOfSingleShoots * akm47sgun.SingleShootPrice)}");
+                    recipt.WriteLine($"\t\tLiczba seryjnych strzałów: {akm47sgun.NumberOfMultipleShoots} x {akm47sgun.MultipleShootPrice}zł = {(akm47sgun.NumberOfMultipleShoots * akm47sgun.MultipleShootPrice)}");
+                    suma += (akm47sgun.NumberOfSingleShoots * akm47sgun.SingleShootPrice) + (akm47sgun.NumberOfMultipleShoots * akm47sgun.MultipleShootPrice);
+                }
+                if (glockGun.NumberOfSingleShoots != 0)
+                {
+                    recipt.WriteLine($"\tOpłata za {GunsTypeNames.GLOCK} ");
+                    recipt.WriteLine($"\t\tLiczba pojedyńczych strzałów: {glockGun.NumberOfSingleShoots} x {glockGun.SingleShootPrice}zł = {(glockGun.NumberOfSingleShoots * glockGun.SingleShootPrice)}");
+                    suma += (glockGun.NumberOfSingleShoots * glockGun.SingleShootPrice);
+                }
+                if ((magnumGun.NumberOfSingleShoots != 0) || (magnumGun.NumberOfMultipleShoots != 0))
+                {
+                    recipt.WriteLine($"\tOpłata za {GunsTypeNames.MAGNUM} ");
+                    recipt.WriteLine($"\t\tLiczba pojedyńczych strzałów: {magnumGun.NumberOfSingleShoots} x {magnumGun.SingleShootPrice}zł = {(magnumGun.NumberOfSingleShoots * magnumGun.SingleShootPrice)}");
+                    recipt.WriteLine($"\t\tLiczba seryjnych strzałów: {magnumGun.NumberOfMultipleShoots} x {magnumGun.MultipleShootPrice}zł = {(magnumGun.NumberOfMultipleShoots * magnumGun.MultipleShootPrice)}");
+                    suma += (magnumGun.NumberOfSingleShoots * magnumGun.SingleShootPrice) + (magnumGun.NumberOfMultipleShoots * magnumGun.MultipleShootPrice);
+                }
+                if (waltherGun.NumberOfSingleShoots != 0)
+                {
+                    recipt.WriteLine($"\tOpłata za {GunsTypeNames.WALTHER} ");
+                    recipt.WriteLine($"\t\tLiczba pojedyńczych strzałów: {waltherGun.NumberOfSingleShoots} x {waltherGun.SingleShootPrice}zł = {(waltherGun.NumberOfSingleShoots * waltherGun.SingleShootPrice)}");
+                    suma += (waltherGun.NumberOfSingleShoots * waltherGun.SingleShootPrice);
+                }
+                if ((xm15Gun.NumberOfSingleShoots != 0) || (xm15Gun.NumberOfMultipleShoots != 0))
+                {
+                    recipt.WriteLine($"\tOpłata za {GunsTypeNames.XM15} ");
+                    recipt.WriteLine($"\t\tLiczba pojedyńczych strzałów: {xm15Gun.NumberOfSingleShoots} x {xm15Gun.SingleShootPrice}zł = {(xm15Gun.NumberOfSingleShoots * xm15Gun.SingleShootPrice)}");
+                    recipt.WriteLine($"\t\tLiczba seryjnych strzałów: {xm15Gun.NumberOfMultipleShoots} x {xm15Gun.MultipleShootPrice}zł = {(xm15Gun.NumberOfMultipleShoots * xm15Gun.MultipleShootPrice)}");
+                    suma += (xm15Gun.NumberOfSingleShoots * xm15Gun.SingleShootPrice) + (xm15Gun.NumberOfMultipleShoots * xm15Gun.MultipleShootPrice);
+                }
+
+                recipt.WriteLine("KOSZT CAŁKOWITY: " + suma + "zł");
+                recipt.WriteLine("\n\nDziękujemy i zapraszamy ponownie");
+
+
+                recipt.Close();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Błąd drukarki...: " + e.Message);
+            }
+            finally
+            {
+                Console.WriteLine("Zabierz ze sobą paragon by móc otworzyć bramkę wejściową.");
+            }
         }
     }
 }
