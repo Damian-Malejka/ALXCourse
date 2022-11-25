@@ -89,38 +89,38 @@ namespace ShootingRangeApp
             if((akm47sgun.NumberOfSingleShoots != 0) || (akm47sgun.NumberOfMultipleShoots!=0))
             {
                 Console.WriteLine($"\tOpłata za {GunsTypeNames.AKM47S} ");
-                Console.WriteLine($"\t\tLiczba pojedyńczych strzałów: {akm47sgun.NumberOfSingleShoots} x {akm47sgun.SingleShootPrice}zł = {(akm47sgun.NumberOfSingleShoots * akm47sgun.SingleShootPrice)}");
-                Console.WriteLine($"\t\tLiczba seryjnych strzałów: {akm47sgun.NumberOfMultipleShoots} x {akm47sgun.MultipleShootPrice}zł = {(akm47sgun.NumberOfMultipleShoots * akm47sgun.MultipleShootPrice)}");
-                suma += (akm47sgun.NumberOfSingleShoots * akm47sgun.SingleShootPrice) + (akm47sgun.NumberOfMultipleShoots * akm47sgun.MultipleShootPrice);
+                Console.WriteLine($"\t\tLiczba pojedyńczych strzałów: {akm47sgun.NumberOfSingleShoots} x {akm47sgun.SingleShootPrice}zł = {Math.Round(akm47sgun.NumberOfSingleShoots * akm47sgun.SingleShootPrice,2, MidpointRounding.ToEven)}zł(Netto) \t {Math.Round((akm47sgun.NumberOfSingleShoots * akm47sgun.SingleShootPrice)*0.23 + akm47sgun.NumberOfSingleShoots * akm47sgun.SingleShootPrice, 2 , MidpointRounding.ToEven)}zł(Brutto)");
+                Console.WriteLine($"\t\tLiczba seryjnych strzałów: {akm47sgun.NumberOfMultipleShoots} x {akm47sgun.MultipleShootPrice}zł = {Math.Round(akm47sgun.NumberOfMultipleShoots * akm47sgun.MultipleShootPrice,2, MidpointRounding.ToEven)}zł(Netto) \t {Math.Round((akm47sgun.NumberOfMultipleShoots * akm47sgun.MultipleShootPrice)*0.23 + akm47sgun.NumberOfMultipleShoots * akm47sgun.MultipleShootPrice, 2 , MidpointRounding.ToEven)}zł(Brutto)");
+                suma += Math.Round(((akm47sgun.NumberOfSingleShoots * akm47sgun.SingleShootPrice) + (akm47sgun.NumberOfMultipleShoots * akm47sgun.MultipleShootPrice)),2,MidpointRounding.ToEven);
             }
             if (glockGun.NumberOfSingleShoots != 0)
             {
                 Console.WriteLine($"\tOpłata za {GunsTypeNames.GLOCK} ");
-                Console.WriteLine($"\t\tLiczba pojedyńczych strzałów: {glockGun.NumberOfSingleShoots} x {glockGun.SingleShootPrice}zł = {(glockGun.NumberOfSingleShoots * glockGun.SingleShootPrice)}");
-                suma += (glockGun.NumberOfSingleShoots * glockGun.SingleShootPrice);
+                Console.WriteLine($"\t\tLiczba pojedyńczych strzałów: {glockGun.NumberOfSingleShoots} x {glockGun.SingleShootPrice}zł = {Math.Round(glockGun.NumberOfSingleShoots * glockGun.SingleShootPrice,2, MidpointRounding.ToEven)}zł(Netto) \t {Math.Round((glockGun.NumberOfSingleShoots * glockGun.SingleShootPrice) * 0.23 + (glockGun.NumberOfSingleShoots * glockGun.SingleShootPrice), 2, MidpointRounding.ToEven)}zł(Brutto)");
+                suma += Math.Round(glockGun.NumberOfSingleShoots * glockGun.SingleShootPrice,2, MidpointRounding.ToEven);
             }
             if ((magnumGun.NumberOfSingleShoots != 0) || (magnumGun.NumberOfMultipleShoots != 0))
             {
                 Console.WriteLine($"\tOpłata za {GunsTypeNames.MAGNUM} ");
-                Console.WriteLine($"\t\tLiczba pojedyńczych strzałów: {magnumGun.NumberOfSingleShoots} x {magnumGun.SingleShootPrice}zł = {(magnumGun.NumberOfSingleShoots * magnumGun.SingleShootPrice)}");
-                Console.WriteLine($"\t\tLiczba seryjnych strzałów: {magnumGun.NumberOfMultipleShoots} x {magnumGun.MultipleShootPrice}zł = {(magnumGun.NumberOfMultipleShoots * magnumGun.MultipleShootPrice)}");
-                suma += (magnumGun.NumberOfSingleShoots * magnumGun.SingleShootPrice) + (magnumGun.NumberOfMultipleShoots * magnumGun.MultipleShootPrice);
+                Console.WriteLine($"\t\tLiczba pojedyńczych strzałów: {magnumGun.NumberOfSingleShoots} x {magnumGun.SingleShootPrice}zł = {Math.Round(magnumGun.NumberOfSingleShoots * magnumGun.SingleShootPrice,2, MidpointRounding.ToEven)}zł(Netto) \t {Math.Round((magnumGun.NumberOfSingleShoots * magnumGun.SingleShootPrice)*0.23 + magnumGun.NumberOfSingleShoots * magnumGun.SingleShootPrice, 2, MidpointRounding.ToEven)}zł(Brutto)");
+                Console.WriteLine($"\t\tLiczba seryjnych strzałów: {magnumGun.NumberOfMultipleShoots} x {magnumGun.MultipleShootPrice}zł = {Math.Round(magnumGun.NumberOfMultipleShoots * magnumGun.MultipleShootPrice,2, MidpointRounding.ToEven)}zł(Netto) \t {Math.Round((magnumGun.NumberOfMultipleShoots * magnumGun.MultipleShootPrice)*0.23 + magnumGun.NumberOfMultipleShoots * magnumGun.MultipleShootPrice, 2, MidpointRounding.ToEven)}zł(Brutto)");
+                suma += Math.Round(((magnumGun.NumberOfSingleShoots * magnumGun.SingleShootPrice) + (magnumGun.NumberOfMultipleShoots * magnumGun.MultipleShootPrice)),2, MidpointRounding.ToEven);
             }
             if (waltherGun.NumberOfSingleShoots != 0)
             {
                 Console.WriteLine($"\tOpłata za {GunsTypeNames.WALTHER} ");
-                Console.WriteLine($"\t\tLiczba pojedyńczych strzałów: {waltherGun.NumberOfSingleShoots} x {waltherGun.SingleShootPrice}zł = {(waltherGun.NumberOfSingleShoots * waltherGun.SingleShootPrice)}");
-                suma += (waltherGun.NumberOfSingleShoots * waltherGun.SingleShootPrice);
+                Console.WriteLine($"\t\tLiczba pojedyńczych strzałów: {waltherGun.NumberOfSingleShoots} x {waltherGun.SingleShootPrice}zł = {Math.Round(waltherGun.NumberOfSingleShoots * waltherGun.SingleShootPrice,2, MidpointRounding.ToEven)}zł(Netto) \t {Math.Round((waltherGun.NumberOfSingleShoots * waltherGun.SingleShootPrice) * 0.23 + waltherGun.NumberOfSingleShoots * waltherGun.SingleShootPrice, 2, MidpointRounding.ToEven)}zł(Brutto)");
+                suma += Math.Round(waltherGun.NumberOfSingleShoots * waltherGun.SingleShootPrice,2, MidpointRounding.ToEven);
             }
             if ((xm15Gun.NumberOfSingleShoots != 0) || (xm15Gun.NumberOfMultipleShoots != 0))
             {
                 Console.WriteLine($"\tOpłata za {GunsTypeNames.XM15} ");
-                Console.WriteLine($"\t\tLiczba pojedyńczych strzałów: {xm15Gun.NumberOfSingleShoots} x {xm15Gun.SingleShootPrice}zł = {(xm15Gun.NumberOfSingleShoots * xm15Gun.SingleShootPrice)}");
-                Console.WriteLine($"\t\tLiczba seryjnych strzałów: {xm15Gun.NumberOfMultipleShoots} x {xm15Gun.MultipleShootPrice}zł = {(xm15Gun.NumberOfMultipleShoots * xm15Gun.MultipleShootPrice)}");
-                suma += (xm15Gun.NumberOfSingleShoots * xm15Gun.SingleShootPrice) + (xm15Gun.NumberOfMultipleShoots * xm15Gun.MultipleShootPrice);
+                Console.WriteLine($"\t\tLiczba pojedyńczych strzałów: {xm15Gun.NumberOfSingleShoots} x {xm15Gun.SingleShootPrice}zł = {Math.Round(xm15Gun.NumberOfSingleShoots * xm15Gun.SingleShootPrice,2,MidpointRounding.ToEven)}zł(Netto) \t {Math.Round((xm15Gun.NumberOfSingleShoots * xm15Gun.SingleShootPrice) * 0.23 + xm15Gun.NumberOfSingleShoots * xm15Gun.SingleShootPrice, 2, MidpointRounding.ToEven)}zł(Brutto)");
+                Console.WriteLine($"\t\tLiczba seryjnych strzałów: {xm15Gun.NumberOfMultipleShoots} x {xm15Gun.MultipleShootPrice}zł = {Math.Round(xm15Gun.NumberOfMultipleShoots * xm15Gun.MultipleShootPrice,2, MidpointRounding.ToEven)}zł(Netto) \t {Math.Round((xm15Gun.NumberOfMultipleShoots * xm15Gun.MultipleShootPrice)*0.23 + xm15Gun.NumberOfMultipleShoots * xm15Gun.MultipleShootPrice, 2, MidpointRounding.ToEven)}zł(Brutto)");
+                suma += Math.Round(((xm15Gun.NumberOfSingleShoots * xm15Gun.SingleShootPrice) + (xm15Gun.NumberOfMultipleShoots * xm15Gun.MultipleShootPrice)),2, MidpointRounding.ToEven);
             }
 
-            Console.WriteLine("KOSZT CAŁKOWITY: " + suma + "zł");
+            Console.WriteLine("KOSZT CAŁKOWITY: \n\t" + suma + "zł(Netto)\n\t" + Math.Round((suma + suma * 0.23),2, MidpointRounding.ToEven) + "zł(Brutto)");
             Console.WriteLine("\n\nDziękujemy i zapraszamy ponownie");
         }
 
@@ -135,38 +135,38 @@ namespace ShootingRangeApp
                 if ((akm47sgun.NumberOfSingleShoots != 0) || (akm47sgun.NumberOfMultipleShoots != 0))
                 {
                     recipt.WriteLine($"\tOpłata za {GunsTypeNames.AKM47S} ");
-                    recipt.WriteLine($"\t\tLiczba pojedyńczych strzałów: {akm47sgun.NumberOfSingleShoots} x {akm47sgun.SingleShootPrice}zł = {(akm47sgun.NumberOfSingleShoots * akm47sgun.SingleShootPrice)}");
-                    recipt.WriteLine($"\t\tLiczba seryjnych strzałów: {akm47sgun.NumberOfMultipleShoots} x {akm47sgun.MultipleShootPrice}zł = {(akm47sgun.NumberOfMultipleShoots * akm47sgun.MultipleShootPrice)}");
-                    suma += (akm47sgun.NumberOfSingleShoots * akm47sgun.SingleShootPrice) + (akm47sgun.NumberOfMultipleShoots * akm47sgun.MultipleShootPrice);
+                    recipt.WriteLine($"\t\tLiczba pojedyńczych strzałów: {akm47sgun.NumberOfSingleShoots} x {akm47sgun.SingleShootPrice}zł = {Math.Round(akm47sgun.NumberOfSingleShoots * akm47sgun.SingleShootPrice, 2, MidpointRounding.ToEven)}zł(Netto) \t {Math.Round((akm47sgun.NumberOfSingleShoots * akm47sgun.SingleShootPrice) * 0.23 + akm47sgun.NumberOfSingleShoots * akm47sgun.SingleShootPrice, 2, MidpointRounding.ToEven)}zł(Brutto)");
+                    recipt.WriteLine($"\t\tLiczba seryjnych strzałów: {akm47sgun.NumberOfMultipleShoots} x {akm47sgun.MultipleShootPrice}zł = {Math.Round(akm47sgun.NumberOfMultipleShoots * akm47sgun.MultipleShootPrice, 2, MidpointRounding.ToEven)}zł(Netto) \t {Math.Round((akm47sgun.NumberOfMultipleShoots * akm47sgun.MultipleShootPrice) * 0.23 + akm47sgun.NumberOfMultipleShoots * akm47sgun.MultipleShootPrice, 2, MidpointRounding.ToEven)}zł(Brutto)");
+                    suma += Math.Round(((akm47sgun.NumberOfSingleShoots * akm47sgun.SingleShootPrice) + (akm47sgun.NumberOfMultipleShoots * akm47sgun.MultipleShootPrice)), 2, MidpointRounding.ToEven);
                 }
                 if (glockGun.NumberOfSingleShoots != 0)
                 {
                     recipt.WriteLine($"\tOpłata za {GunsTypeNames.GLOCK} ");
-                    recipt.WriteLine($"\t\tLiczba pojedyńczych strzałów: {glockGun.NumberOfSingleShoots} x {glockGun.SingleShootPrice}zł = {(glockGun.NumberOfSingleShoots * glockGun.SingleShootPrice)}");
-                    suma += (glockGun.NumberOfSingleShoots * glockGun.SingleShootPrice);
+                    recipt.WriteLine($"\t\tLiczba pojedyńczych strzałów: {glockGun.NumberOfSingleShoots} x {glockGun.SingleShootPrice}zł = {Math.Round(glockGun.NumberOfSingleShoots * glockGun.SingleShootPrice, 2, MidpointRounding.ToEven)}zł(Netto) \t {Math.Round((glockGun.NumberOfSingleShoots * glockGun.SingleShootPrice) * 0.23 + (glockGun.NumberOfSingleShoots * glockGun.SingleShootPrice), 2, MidpointRounding.ToEven)}zł(Brutto)");
+                    suma += Math.Round(glockGun.NumberOfSingleShoots * glockGun.SingleShootPrice, 2, MidpointRounding.ToEven);
                 }
                 if ((magnumGun.NumberOfSingleShoots != 0) || (magnumGun.NumberOfMultipleShoots != 0))
                 {
                     recipt.WriteLine($"\tOpłata za {GunsTypeNames.MAGNUM} ");
-                    recipt.WriteLine($"\t\tLiczba pojedyńczych strzałów: {magnumGun.NumberOfSingleShoots} x {magnumGun.SingleShootPrice}zł = {(magnumGun.NumberOfSingleShoots * magnumGun.SingleShootPrice)}");
-                    recipt.WriteLine($"\t\tLiczba seryjnych strzałów: {magnumGun.NumberOfMultipleShoots} x {magnumGun.MultipleShootPrice}zł = {(magnumGun.NumberOfMultipleShoots * magnumGun.MultipleShootPrice)}");
-                    suma += (magnumGun.NumberOfSingleShoots * magnumGun.SingleShootPrice) + (magnumGun.NumberOfMultipleShoots * magnumGun.MultipleShootPrice);
+                    recipt.WriteLine($"\t\tLiczba pojedyńczych strzałów: {magnumGun.NumberOfSingleShoots} x {magnumGun.SingleShootPrice}zł = {Math.Round(magnumGun.NumberOfSingleShoots * magnumGun.SingleShootPrice, 2, MidpointRounding.ToEven)}zł(Netto) \t {Math.Round((magnumGun.NumberOfSingleShoots * magnumGun.SingleShootPrice) * 0.23 + magnumGun.NumberOfSingleShoots * magnumGun.SingleShootPrice, 2, MidpointRounding.ToEven)}zł(Brutto)");
+                    recipt.WriteLine($"\t\tLiczba seryjnych strzałów: {magnumGun.NumberOfMultipleShoots} x {magnumGun.MultipleShootPrice}zł = {Math.Round(magnumGun.NumberOfMultipleShoots * magnumGun.MultipleShootPrice, 2, MidpointRounding.ToEven)}zł(Netto) \t {Math.Round((magnumGun.NumberOfMultipleShoots * magnumGun.MultipleShootPrice) * 0.23 + magnumGun.NumberOfMultipleShoots * magnumGun.MultipleShootPrice, 2, MidpointRounding.ToEven)}zł(Brutto)");
+                    suma += Math.Round(((magnumGun.NumberOfSingleShoots * magnumGun.SingleShootPrice) + (magnumGun.NumberOfMultipleShoots * magnumGun.MultipleShootPrice)), 2, MidpointRounding.ToEven);
                 }
                 if (waltherGun.NumberOfSingleShoots != 0)
                 {
                     recipt.WriteLine($"\tOpłata za {GunsTypeNames.WALTHER} ");
-                    recipt.WriteLine($"\t\tLiczba pojedyńczych strzałów: {waltherGun.NumberOfSingleShoots} x {waltherGun.SingleShootPrice}zł = {(waltherGun.NumberOfSingleShoots * waltherGun.SingleShootPrice)}");
-                    suma += (waltherGun.NumberOfSingleShoots * waltherGun.SingleShootPrice);
+                    recipt.WriteLine($"\t\tLiczba pojedyńczych strzałów: {waltherGun.NumberOfSingleShoots} x {waltherGun.SingleShootPrice}zł = {Math.Round(waltherGun.NumberOfSingleShoots * waltherGun.SingleShootPrice, 2, MidpointRounding.ToEven)}zł(Netto) \t {Math.Round((waltherGun.NumberOfSingleShoots * waltherGun.SingleShootPrice) * 0.23 + waltherGun.NumberOfSingleShoots * waltherGun.SingleShootPrice, 2, MidpointRounding.ToEven)}zł(Brutto)");
+                    suma += Math.Round(waltherGun.NumberOfSingleShoots * waltherGun.SingleShootPrice, 2, MidpointRounding.ToEven);
                 }
                 if ((xm15Gun.NumberOfSingleShoots != 0) || (xm15Gun.NumberOfMultipleShoots != 0))
                 {
                     recipt.WriteLine($"\tOpłata za {GunsTypeNames.XM15} ");
-                    recipt.WriteLine($"\t\tLiczba pojedyńczych strzałów: {xm15Gun.NumberOfSingleShoots} x {xm15Gun.SingleShootPrice}zł = {(xm15Gun.NumberOfSingleShoots * xm15Gun.SingleShootPrice)}");
-                    recipt.WriteLine($"\t\tLiczba seryjnych strzałów: {xm15Gun.NumberOfMultipleShoots} x {xm15Gun.MultipleShootPrice}zł = {(xm15Gun.NumberOfMultipleShoots * xm15Gun.MultipleShootPrice)}");
-                    suma += (xm15Gun.NumberOfSingleShoots * xm15Gun.SingleShootPrice) + (xm15Gun.NumberOfMultipleShoots * xm15Gun.MultipleShootPrice);
+                    recipt.WriteLine($"\t\tLiczba pojedyńczych strzałów: {xm15Gun.NumberOfSingleShoots} x {xm15Gun.SingleShootPrice}zł = {Math.Round(xm15Gun.NumberOfSingleShoots * xm15Gun.SingleShootPrice, 2, MidpointRounding.ToEven)}zł(Netto) \t {Math.Round((xm15Gun.NumberOfSingleShoots * xm15Gun.SingleShootPrice) * 0.23 + xm15Gun.NumberOfSingleShoots * xm15Gun.SingleShootPrice, 2, MidpointRounding.ToEven)}zł(Brutto)");
+                    recipt.WriteLine($"\t\tLiczba seryjnych strzałów: {xm15Gun.NumberOfMultipleShoots} x {xm15Gun.MultipleShootPrice}zł = {Math.Round(xm15Gun.NumberOfMultipleShoots * xm15Gun.MultipleShootPrice, 2, MidpointRounding.ToEven)}zł(Netto) \t {Math.Round((xm15Gun.NumberOfMultipleShoots * xm15Gun.MultipleShootPrice) * 0.23 + xm15Gun.NumberOfMultipleShoots * xm15Gun.MultipleShootPrice, 2, MidpointRounding.ToEven)}zł(Brutto)");
+                    suma += Math.Round(((xm15Gun.NumberOfSingleShoots * xm15Gun.SingleShootPrice) + (xm15Gun.NumberOfMultipleShoots * xm15Gun.MultipleShootPrice)), 2, MidpointRounding.ToEven);
                 }
 
-                recipt.WriteLine("KOSZT CAŁKOWITY: " + suma + "zł");
+                recipt.WriteLine("KOSZT CAŁKOWITY: \n\t" + suma + "zł(Netto)\n\t" + Math.Round((suma + suma * 0.23), 2, MidpointRounding.ToEven) + "zł(Brutto)");
                 recipt.WriteLine("\n\nDziękujemy i zapraszamy ponownie");
 
 
