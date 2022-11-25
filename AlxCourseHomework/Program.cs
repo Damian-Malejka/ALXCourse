@@ -8,5 +8,12 @@ using AlxCourseHomework.MaterialAssignments;
 //Operators.Exercise1();
 //Operators.Exercise2();
 //ConditionalStatements.Exercise1();
-ConditionalStatements.Exercise2();
+//ConditionalStatements.Exercise2();
+//Loops.Exercise1();
+//Loops.Exercise2();
+//Arrays.Exercise1();
+//Arrays.Exercise2();
+//Arrays.Exercise3();
+//EnumsAndLists.Exercise1();
+EnumsAndLists.Exercise2();
 
