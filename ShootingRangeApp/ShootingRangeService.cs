@@ -82,6 +82,7 @@ namespace ShootingRangeApp
                 continueVar = Console.ReadKey().KeyChar;
             } while(continueVar=='T' || continueVar == 't');
             ShowRecipt(akm47sgun, glockGun, magnumGun, waltherGun, xm15Gun);
+
         }
 
         public static void ShowRecipt(Akm47s akm47sgun, Glock glockGun, Magnum magnumGun, Walther waltherGun, Xm15 xm15Gun)
