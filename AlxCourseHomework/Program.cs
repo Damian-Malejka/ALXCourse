@@ -1,5 +1,6 @@
 ﻿using AlxCourseHomework.MailingService;
 using AlxCourseHomework.MaterialAssignments;
+using AlxCourseHomework.MaterialAssignments.ExerciseClassesAndConstructor;
 
 //Homework1Test.Run();
 //Variables.Exercise1();
@@ -15,5 +16,7 @@ using AlxCourseHomework.MaterialAssignments;
 //Arrays.Exercise2();
 //Arrays.Exercise3();
 //EnumsAndLists.Exercise1();
-EnumsAndLists.Exercise2();
+//EnumsAndLists.Exercise2();
+//ClassesAndConstructors.Exercise1();
+ClassesAndConstructors.Exercise2();
 
