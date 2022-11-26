@@ -178,7 +178,7 @@ namespace ShootingRangeApp
             }
             finally
             {
-                Console.WriteLine("Zabierz ze sobą paragon by móc otworzyć bramkę wejściową.");
+                Console.WriteLine("Zapraszamy do zabawy!");
             }
         }
     }
