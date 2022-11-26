@@ -20,7 +20,7 @@ namespace ShopApp.Models
             IsFood = isFood;
             if(IsFood)
             {
-                Bruttoprice = NettoPrice + NettoPrice * 0.05M;
+                Bruttoprice = NettoPrice + NettoPrice * 0.05M;//M bo decimal
             }
             else
             {
