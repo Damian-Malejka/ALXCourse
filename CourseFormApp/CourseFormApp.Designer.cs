@@ -45,6 +45,7 @@
             this.MultipleButton = new System.Windows.Forms.RadioButton();
             this.DivideButton = new System.Windows.Forms.RadioButton();
             this.LogBox = new System.Windows.Forms.TextBox();
+            this.ExceptionButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // DoNotButton1
@@ -206,12 +207,23 @@
             this.LogBox.Size = new System.Drawing.Size(228, 133);
             this.LogBox.TabIndex = 18;
             // 
+            // ExceptionButton
+            // 
+            this.ExceptionButton.Location = new System.Drawing.Point(641, 267);
+            this.ExceptionButton.Name = "ExceptionButton";
+            this.ExceptionButton.Size = new System.Drawing.Size(129, 65);
+            this.ExceptionButton.TabIndex = 19;
+            this.ExceptionButton.Text = "wyjatek";
+            this.ExceptionButton.UseVisualStyleBackColor = true;
+            this.ExceptionButton.Click += new System.EventHandler(this.ExceptionButton_Click);
+            // 
             // CourseFormApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ExceptionButton);
             this.Controls.Add(this.LogBox);
             this.Controls.Add(this.DivideButton);
             this.Controls.Add(this.MultipleButton);
@@ -256,5 +268,6 @@
         private RadioButton MultipleButton;
         private RadioButton DivideButton;
         private TextBox LogBox;
+        private Button ExceptionButton;
     }
 }
