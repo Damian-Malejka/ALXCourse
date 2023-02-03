@@ -118,38 +118,45 @@ namespace LibraryDataBaseApp
 
         private void AddTransactionButton_Click(object sender, EventArgs e)
         {
-            _Client.IdClient = Int32.Parse(ClientIdTransactionBox.Text);
-            _Book.IdBook = Int32.Parse(BookIdTransactionBox.Text);
-
-            if (ClientIdTransactionBox.Text != "" && BookIdTransactionBox.Text != "")
+            try
             {
-                if (_BookRepository.CheckBooks(_Book))
+                _Client.IdClient = Int32.Parse(ClientIdTransactionBox.Text);
+                _Book.IdBook = Int32.Parse(BookIdTransactionBox.Text);
+
+                if (ClientIdTransactionBox.Text != "" && BookIdTransactionBox.Text != "")
                 {
-                    if (_ClientRepository.CheckClients(_Client))
+                    if (_BookRepository.CheckBooks(_Book))
                     {
-                        if (_TransactionRepository.InsertTransactionToDb(_Transaction, _Book, _Client))
+                        if (_ClientRepository.CheckClients(_Client))
                         {
-                            LogBox.Text = "Transaction was added";
+                            if (_TransactionRepository.InsertTransactionToDb(_Transaction, _Book, _Client))
+                            {
+                                LogBox.Text = "Transaction was added";
+                            }
+                            else
+                            {
+                                LogBox.Text = "This book is already booked";
+                            }
+
                         }
                         else
                         {
-                            LogBox.Text = "This book is already booked";
+                            LogBox.Text = "Client was not found";
                         }
-
                     }
                     else
                     {
-                        LogBox.Text = "Client was not found";
+                        LogBox.Text = "Book was not found";
                     }
                 }
                 else
                 {
-                    LogBox.Text = "Book was not found";
+                    LogBox.Text = "Complete all information in form";
                 }
             }
-            else
+            catch
             {
-                LogBox.Text = "Complete all information in form";
+                LogBox.Text = "You should write a number in  TextBox";
             }
         }
 
@@ -173,14 +180,21 @@ namespace LibraryDataBaseApp
 
         private void RemoveTransactionButton_Click(object sender, EventArgs e)
         {
-            _Transaction.IdTransaction = Int32.Parse(IdTransactionRemoveBox.Text);
-            if(_TransactionRepository.RemoveTransactionsFromDb(_Transaction))
+            try
             {
-                LogBox.Text = "Transaction was removed";
+                _Transaction.IdTransaction = Int32.Parse(IdTransactionRemoveBox.Text);
+                if (_TransactionRepository.RemoveTransactionsFromDb(_Transaction))
+                {
+                    LogBox.Text = "Transaction was removed";
+                }
+                else
+                {
+                    LogBox.Text = "Fail while client been removing";
+                }
             }
-            else
+            catch
             {
-                LogBox.Text = "Fail while client been removing";
+                LogBox.Text = "You should write a number in  TextBox";
             }
         }
     }
