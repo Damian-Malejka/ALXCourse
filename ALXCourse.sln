@@ -44,7 +44,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Totolotek", "Totolotek\Toto
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DBInteractions", "DBInteractions", "{27154B22-EDCE-47BF-A29B-02D493241B50}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADODemoConsoleApp", "ADODemoConsoleApp\ADODemoConsoleApp.csproj", "{25B6A03A-E9E3-4A4D-9A94-6ABDE42E399E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ADODemoConsoleApp", "ADODemoConsoleApp\ADODemoConsoleApp.csproj", "{25B6A03A-E9E3-4A4D-9A94-6ABDE42E399E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryDataBaseApp", "LibraryDataBaseApp\LibraryDataBaseApp.csproj", "{EA4D7A64-CAD1-4E43-9FD8-9D36E97EBFFB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -112,6 +114,10 @@ Global
 		{25B6A03A-E9E3-4A4D-9A94-6ABDE42E399E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{25B6A03A-E9E3-4A4D-9A94-6ABDE42E399E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{25B6A03A-E9E3-4A4D-9A94-6ABDE42E399E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA4D7A64-CAD1-4E43-9FD8-9D36E97EBFFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA4D7A64-CAD1-4E43-9FD8-9D36E97EBFFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA4D7A64-CAD1-4E43-9FD8-9D36E97EBFFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA4D7A64-CAD1-4E43-9FD8-9D36E97EBFFB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -131,6 +137,7 @@ Global
 		{3E1893F7-40F0-4C2C-A71F-983909FB0932} = {9B19C27B-E988-4411-836F-D493BC6F0C70}
 		{CAA65F7C-3DB6-404C-8D40-F7068C0B8482} = {9B19C27B-E988-4411-836F-D493BC6F0C70}
 		{25B6A03A-E9E3-4A4D-9A94-6ABDE42E399E} = {27154B22-EDCE-47BF-A29B-02D493241B50}
+		{EA4D7A64-CAD1-4E43-9FD8-9D36E97EBFFB} = {9B19C27B-E988-4411-836F-D493BC6F0C70}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {34F9277C-2BF5-4104-9594-A8F159C6F851}
